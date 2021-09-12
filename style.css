@@ -1,7 +1,7 @@
 :root {
   --bck-color: #db524d;
   --bck-nav: #e1716d;
-  --nav: #fbeeed;
+  --nav-color: #fbeeed;
   --white: #ffffff;
 
   --icon-margin: 0.2rem;
@@ -20,14 +20,14 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: var(--white);
-  padding: var(--nav-padding);
-
   font-family: menco, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
+
+  text-decoration: none;
+  color: var(--white);
+  padding: var(--nav-padding);
 }
 
 ul {
@@ -36,9 +36,12 @@ ul {
 }
 
 li {
-  background-color: var(--bck-nav);
-  color: var(--white);
+  font-family: menco, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 
+  background-color: var(--bck-nav);
+  color: var(--nav-color);
   padding: var(--nav-padding-tb) var(--nav-padding-lr);
   border-radius: 0.3rem;
 }
