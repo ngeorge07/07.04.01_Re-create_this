@@ -1,0 +1,66 @@
+:root {
+  --bck-color: #db524d;
+  --bck-nav: #e1716d;
+  --nav: #fbeeed;
+  --white: #ffffff;
+
+  --icon-margin: 0.2rem;
+  --nav-margin: 0.7rem;
+  --nav-padding-lr: 0.7rem;
+  --nav-padding-tb: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bck-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+  padding: var(--nav-padding);
+
+  font-family: menco, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+  background-color: var(--bck-nav);
+  color: var(--white);
+
+  padding: var(--nav-padding-tb) var(--nav-padding-lr);
+  border-radius: 0.3rem;
+}
+
+li:nth-child(1),
+li:nth-child(2) {
+  margin-right: var(--nav-margin);
+}
+
+nav {
+  font-family: menco, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem 25vw 0 25vw;
+  padding-bottom: 1rem;
+  border-bottom: 0.15rem solid #c54a45;
+}
+
+i {
+  margin-right: var(--icon-margin);
+}
