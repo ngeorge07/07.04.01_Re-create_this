@@ -13,6 +13,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,8 +23,10 @@ body {
 }
 
 header {
-  justify-self: center;
-  width: 50%;
+  padding: 0px 12px;
+  max-width: 620px;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 /***************************
   HEADER START
@@ -73,10 +76,13 @@ nav {
   font-weight: 700;
   font-style: normal;
 
+  background-color: inherit;
+  width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin: 1rem 30vw 0 30vw; */
+
   margin-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 0.15rem solid #c54a45;
@@ -93,7 +99,7 @@ i {
 /***************************
   MEDIA QUERIES
 ****************************/
-@media screen and (max-width: 905px) {
+/* @media screen and (max-width: 905px) {
   header {
     width: 85%;
   }
@@ -106,4 +112,4 @@ i {
     justify-items: center;
     gap: 1rem;
   }
-}
+} */
