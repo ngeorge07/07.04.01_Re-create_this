@@ -67,6 +67,13 @@ li a {
   background-color: var(--bck-nav);
   padding: var(--nav-padding-tb) var(--nav-padding-lr) 0.25rem
     var(--nav-padding-lr);
+
+  transition: background-color 0.2s;
+}
+
+li a:hover {
+  color: var(--white);
+  background-color: #f07773;
 }
 
 .top-nav {
@@ -157,11 +164,15 @@ time {
   padding: 0.7rem 3.7rem;
   border-radius: var(--nav-radius);
   grid-column: 3/7;
+}
+
+.unclicked {
   border-bottom: 0.35rem solid #ebebeb;
 }
 
-.start:active {
+.clicked {
   border: none;
+  padding: 0.7rem 4rem;
 }
 /***************************
   CLOCK END
