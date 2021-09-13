@@ -98,7 +98,7 @@ i {
   justify-items: center;
   max-width: calc(300px + 6 * ((80vw - 300px) / 40));
   margin: 2.5rem auto;
-  padding: 1.7rem 3rem;
+  padding: 1.4rem 2.2rem;
 
   background-color: var(--bck-clock);
   border-radius: 0.5rem;
@@ -142,7 +142,7 @@ time {
 
   font-size: 8rem;
   color: var(--white);
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   grid-column: 1/-1;
 }
 
