@@ -6,7 +6,7 @@
 
   --icon-margin: 0.2rem;
   --nav-margin: 0.7rem;
-  --nav-padding-lr: 0.7rem;
+  --nav-padding-lr: 0.85rem;
   --nav-padding-tb: 0.5rem;
 }
 
@@ -17,15 +17,27 @@
 
 body {
   background-color: var(--bck-color);
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
 }
 
+header {
+  justify-self: center;
+  width: 50%;
+}
+/***************************
+  HEADER START
+****************************/
 a {
+  text-decoration: none;
+}
+
+a:first-child {
   font-family: menco, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 1.5rem;
 
-  text-decoration: none;
   color: var(--white);
   padding: var(--nav-padding);
 }
@@ -42,8 +54,13 @@ li {
 
   background-color: var(--bck-nav);
   color: var(--nav-color);
-  padding: var(--nav-padding-tb) var(--nav-padding-lr);
+  padding: var(--nav-padding-tb) var(--nav-padding-lr) 0.25rem
+    var(--nav-padding-lr);
   border-radius: 0.3rem;
+}
+
+li a {
+  color: var(--nav-color);
 }
 
 li:nth-child(1),
@@ -59,11 +76,34 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 1rem 25vw 0 25vw;
+  /* margin: 1rem 30vw 0 30vw; */
+  margin-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 0.15rem solid #c54a45;
 }
 
 i {
   margin-right: var(--icon-margin);
+}
+
+/***************************
+  HEADER END
+****************************/
+
+/***************************
+  MEDIA QUERIES
+****************************/
+@media screen and (max-width: 905px) {
+  header {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    gap: 1rem;
+  }
 }
