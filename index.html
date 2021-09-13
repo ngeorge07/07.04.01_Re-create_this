@@ -14,14 +14,27 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="top-nav">
         <a href="#"> <i class="fas fa-check-circle"></i>Pomofocus</a>
-        <ul>
-          <li><i class="far fa-chart-bar"></i> <a href="#">Report</a></li>
-          <li><i class="fas fa-cog"></i> <a href="#">Settings</a></li>
-          <li><i class="fas fa-user-circle"></i> <a href="#">Login</a></li>
+        <ul class="top-ul">
+          <li><a href="#"><i class="far fa-chart-bar"></i>Report</li></a>
+          <li><a href="#"><i class="fas fa-cog"></i> Settings</li></a>
+          <li><a href="#"><i class="fas fa-user-circle"></i> Login</li></a>
         </ul>
       </nav>
     </header>
+
+    <main>
+      <div class="clock-container">
+        <ul>
+          <li><button class="active">Pomodoro</button></li>
+          <li><button>Short break</button></li>
+          <li><button>Long break</button></li>
+        </ul>
+        <time datetime="24:59">24:59</time>
+        <button class="start">START</button>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

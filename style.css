@@ -3,11 +3,18 @@
   --bck-nav: #e1716d;
   --nav-color: #fbeeed;
   --white: #ffffff;
+  --active: #be5551;
+
+  --mento-font-family: menco, sans-serif;
+  --mento-bold-font-weight: 700;
+  --mento-normal-font-weight: 500;
+  --mento-font-style: normal;
 
   --icon-margin: 0.2rem;
   --nav-margin: 0.7rem;
   --nav-padding-lr: 0.85rem;
   --nav-padding-tb: 0.5rem;
+  --nav-radius: 0.3rem;
 }
 
 * {
@@ -23,7 +30,7 @@ body {
 
 header {
   justify-self: center;
-  width: 50%;
+  width: calc(600px + 6 * ((50vw - 600px) / 40));
 }
 /***************************
   HEADER START
@@ -32,10 +39,10 @@ a {
   text-decoration: none;
 }
 
-a:first-child {
-  font-family: menco, sans-serif;
-  font-weight: 700;
-  font-style: normal;
+.top-nav > a {
+  font-family: var(--mento-font-family);
+  font-weight: var(--mento-bold-font-weight);
+  font-style: var(--mento-font-style);
   font-size: 1.5rem;
 
   color: var(--white);
@@ -45,22 +52,19 @@ a:first-child {
 ul {
   list-style: none;
   display: flex;
-}
-
-li {
-  font-family: menco, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-
-  background-color: var(--bck-nav);
-  color: var(--nav-color);
-  padding: var(--nav-padding-tb) var(--nav-padding-lr) 0.25rem
-    var(--nav-padding-lr);
-  border-radius: 0.3rem;
+  align-items: center;
 }
 
 li a {
+  font-family: var(--mento-font-family);
+  font-weight: var(--mento-normal-font-weight);
+  font-style: var(--mento-font-style);
+
   color: var(--nav-color);
+  border-radius: var(--nav-radius);
+  background-color: var(--bck-nav);
+  padding: var(--nav-padding-tb) var(--nav-padding-lr) 0.25rem
+    var(--nav-padding-lr);
 }
 
 li:nth-child(1),
@@ -68,18 +72,13 @@ li:nth-child(2) {
   margin-right: var(--nav-margin);
 }
 
-nav {
-  font-family: menco, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-
+.top-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* margin: 1rem 30vw 0 30vw; */
   margin-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 0.15rem solid #c54a45;
+  border-bottom: 0.12rem solid #c54a45;
 }
 
 i {
@@ -91,15 +90,83 @@ i {
 ****************************/
 
 /***************************
+  CLOCK START
+****************************/
+
+.clock-container {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(8, 1fr);
+
+  justify-items: center;
+  width: calc(300px + 6 * ((80vw - 300px) / 40));
+  margin: 2.5rem auto;
+  padding: 1.7rem 3rem;
+
+  background-color: var(--bck-nav);
+  border-radius: 0.5rem;
+}
+
+ul:first-child {
+  grid-column: 1 / -1;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+}
+
+li button {
+  font-family: var(--mento-font-family);
+  font-weight: var(--mento-normal-font-weight);
+  font-style: var(--mento-font-style);
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+.active {
+  font-family: var(--mento-font-family);
+  font-weight: var(--mento-bold-font-weight);
+  font-style: var(--mento-font-style);
+
+  background-color: var(--active);
+  border-radius: var(--nav-radius);
+  padding: 0.2rem 0.8rem;
+}
+
+time {
+  font-family: var(--mento-font-family);
+  font-weight: var(--mento-bold-font-weight);
+  font-style: var(--mento-font-style);
+  font-size: 8rem;
+  color: var(--white);
+  margin-top: 2.5rem;
+  grid-column: 1/-1;
+}
+
+.start {
+  font-family: var(--mento-font-family);
+  font-weight: var(--mento-bold-font-weight);
+  font-style: var(--mento-font-style);
+  font-size: 1.8rem;
+  color: var(--bck-nav);
+  background-color: var(--white);
+  padding: 0.7rem 3.7rem;
+  border-radius: var(--nav-radius);
+  grid-column: 3/7;
+  border-bottom: 0.35rem solid #ebebeb;
+}
+/***************************
+  CLOCK END
+****************************/
+
+/***************************
   MEDIA QUERIES
 ****************************/
-@media screen and (max-width: 905px) {
+@media screen and (max-width: 600px) {
   header {
     width: 85%;
   }
-}
-
-@media screen and (max-width: 600px) {
   nav {
     display: flex;
     flex-direction: column;
