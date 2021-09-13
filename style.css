@@ -1,6 +1,7 @@
 :root {
   --bck-color: #db524d;
   --bck-nav: #e1716d;
+  --bck-clock: #df645f;
   --nav-color: #fbeeed;
   --white: #ffffff;
   --active: #be5551;
@@ -11,7 +12,7 @@
   --mento-font-style: normal;
 
   --icon-margin: 0.2rem;
-  --nav-margin: 0.7rem;
+  --ul-gap: 0.8rem;
   --nav-padding-lr: 0.85rem;
   --nav-padding-tb: 0.5rem;
   --nav-radius: 0.3rem;
@@ -53,6 +54,7 @@ ul {
   list-style: none;
   display: flex;
   align-items: center;
+  gap: var(--ul-gap);
 }
 
 li a {
@@ -65,11 +67,6 @@ li a {
   background-color: var(--bck-nav);
   padding: var(--nav-padding-tb) var(--nav-padding-lr) 0.25rem
     var(--nav-padding-lr);
-}
-
-li:nth-child(1),
-li:nth-child(2) {
-  margin-right: var(--nav-margin);
 }
 
 .top-nav {
@@ -99,11 +96,11 @@ i {
   grid-template-columns: repeat(8, 1fr);
 
   justify-items: center;
-  width: calc(300px + 6 * ((80vw - 300px) / 40));
+  max-width: calc(300px + 6 * ((80vw - 300px) / 40));
   margin: 2.5rem auto;
   padding: 1.7rem 3rem;
 
-  background-color: var(--bck-nav);
+  background-color: var(--bck-clock);
   border-radius: 0.5rem;
 }
 
@@ -114,6 +111,10 @@ ul:first-child {
 button {
   background-color: inherit;
   border: none;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 li button {
@@ -138,6 +139,7 @@ time {
   font-family: var(--mento-font-family);
   font-weight: var(--mento-bold-font-weight);
   font-style: var(--mento-font-style);
+
   font-size: 8rem;
   color: var(--white);
   margin-top: 2.5rem;
@@ -148,13 +150,18 @@ time {
   font-family: var(--mento-font-family);
   font-weight: var(--mento-bold-font-weight);
   font-style: var(--mento-font-style);
+
   font-size: 1.8rem;
-  color: var(--bck-nav);
+  color: var(--bck-color);
   background-color: var(--white);
   padding: 0.7rem 3.7rem;
   border-radius: var(--nav-radius);
   grid-column: 3/7;
   border-bottom: 0.35rem solid #ebebeb;
+}
+
+.start:active {
+  border: none;
 }
 /***************************
   CLOCK END
@@ -172,5 +179,14 @@ time {
     flex-direction: column;
     justify-items: center;
     gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .clock-container {
+    border-radius: initial;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
