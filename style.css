@@ -5,6 +5,7 @@
   --nav-color: #fbeeed;
   --white: #ffffff;
   --active: #be5551;
+  --incomplete: #555555;
 
   --menco-700: normal 700 1rem menco, sans-serif;
   --menco-500: normal 500 1rem menco, sans-serif;
@@ -79,7 +80,7 @@ li a:hover {
   border-bottom: 0.12rem solid #c54a45;
 }
 
-i {
+nav a i {
   margin-right: var(--icon-margin);
 }
 
@@ -211,13 +212,81 @@ time {
 }
 
 .fa-ellipsis-v {
-  background-color: var(--bck-nav);
   padding: 0.5rem 0.8rem;
   border-radius: var(--nav-radius);
 }
 
+.fa-ellipsis-v:hover {
+  cursor: pointer;
+}
+
+.taskbar .fa-ellipsis-v {
+  background-color: var(--bck-nav);
+}
+
+.task-desc .fa-ellipsis-v {
+  color: #989898;
+  border: 0.1rem solid #989898;
+}
+
 /***************************
   TASKBAR END
+****************************/
+
+/***************************
+  TASKBAR BUTTONS START
+****************************/
+.task-desc {
+  display: flex;
+  grid-column: 1/-1;
+  justify-content: space-between;
+
+  margin-bottom: 0.5rem;
+  background-color: var(--white);
+  padding: 1rem 0.8rem;
+  border-radius: var(--nav-radius);
+}
+
+.task-inc {
+  border-left: 0.4rem solid #222222;
+  margin-top: 1.7rem;
+}
+
+.half {
+  display: flex;
+  align-items: center;
+  font: var(--menco-700);
+}
+
+.task-desc .fa-check-circle {
+  font-size: 1.7rem;
+  margin-right: 0.6rem;
+}
+
+.half p {
+  font-size: 1.2rem;
+  margin-top: 0.25rem;
+}
+
+.half p:first-child {
+  color: var(--incomplete);
+  margin-right: 1.5rem;
+}
+
+.task-inc p {
+  color: var(--incomplete);
+}
+
+.task-inc .fa-check-circle {
+  color: #dfdfdf;
+}
+
+.half span {
+  font-size: 0.9rem;
+}
+
+/***************************
+  TASKBAR BUTTONS END
 ****************************/
 
 /***************************
@@ -241,5 +310,10 @@ time {
     max-width: 100%;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .tasks {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
   }
 }
