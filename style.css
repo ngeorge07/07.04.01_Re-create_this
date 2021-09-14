@@ -258,6 +258,10 @@ time {
   font: var(--menco-700);
 }
 
+.half .fa-check-circle:hover {
+  opacity: 0.6;
+}
+
 .task-desc .fa-check-circle {
   font-size: 1.7rem;
   margin-right: 0.6rem;
@@ -279,6 +283,19 @@ time {
 
 .task-inc .fa-check-circle {
   color: #dfdfdf;
+}
+
+.task-com:hover {
+  border-left: 0.4rem solid #2222224f;
+}
+
+.task-com p:nth-child(2) {
+  color: #cacaca;
+  text-decoration: line-through;
+}
+
+.task-com .fa-check-circle {
+  color: var(--bck-color);
 }
 
 .half span {
