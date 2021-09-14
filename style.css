@@ -6,10 +6,8 @@
   --white: #ffffff;
   --active: #be5551;
 
-  --mento-font-family: menco, sans-serif;
-  --mento-bold-font-weight: 700;
-  --mento-normal-font-weight: 500;
-  --mento-font-style: normal;
+  --menco-700: normal 700 1rem menco, sans-serif;
+  --menco-500: normal 500 1rem menco, sans-serif;
 
   --icon-margin: 0.2rem;
   --ul-gap: 0.8rem;
@@ -41,9 +39,7 @@ a {
 }
 
 .top-nav > a {
-  font-family: var(--mento-font-family);
-  font-weight: var(--mento-bold-font-weight);
-  font-style: var(--mento-font-style);
+  font: var(--menco-700);
   font-size: 1.5rem;
 
   color: var(--white);
@@ -58,9 +54,7 @@ ul {
 }
 
 li a {
-  font-family: var(--mento-font-family);
-  font-weight: var(--mento-normal-font-weight);
-  font-style: var(--mento-font-style);
+  font: var(--menco-500);
 
   color: var(--nav-color);
   border-radius: var(--nav-radius);
@@ -99,13 +93,13 @@ i {
 
 .clock-container {
   display: grid;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: auto;
   grid-template-columns: repeat(8, 1fr);
 
   justify-items: center;
-  max-width: calc(300px + 6 * ((80vw - 300px) / 40));
+  max-width: calc(450px + 3 * ((65vw - 450px) / 30));
   margin: 2.5rem auto;
-  padding: 1.4rem 2.2rem;
+  padding: 1.4rem 0;
 
   background-color: var(--bck-clock);
   border-radius: 0.5rem;
@@ -125,17 +119,13 @@ button:hover {
 }
 
 li button {
-  font-family: var(--mento-font-family);
-  font-weight: var(--mento-normal-font-weight);
-  font-style: var(--mento-font-style);
+  font: var(--menco-500);
   font-size: 1.1rem;
   color: var(--white);
 }
 
 .active {
-  font-family: var(--mento-font-family);
-  font-weight: var(--mento-bold-font-weight);
-  font-style: var(--mento-font-style);
+  font: var(--menco-700);
 
   background-color: var(--active);
   border-radius: var(--nav-radius);
@@ -143,9 +133,7 @@ li button {
 }
 
 time {
-  font-family: var(--mento-font-family);
-  font-weight: var(--mento-bold-font-weight);
-  font-style: var(--mento-font-style);
+  font: var(--menco-700);
 
   font-size: 8rem;
   color: var(--white);
@@ -154,9 +142,7 @@ time {
 }
 
 .start {
-  font-family: var(--mento-font-family);
-  font-weight: var(--mento-bold-font-weight);
-  font-style: var(--mento-font-style);
+  font: var(--menco-700);
 
   font-size: 1.8rem;
   color: var(--bck-color);
