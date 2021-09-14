@@ -133,7 +133,7 @@ li button {
   padding: 0.2rem 0.8rem;
 }
 
-time {
+.clock-container time {
   font: var(--menco-700);
 
   font-size: 8rem;
@@ -245,6 +245,7 @@ time {
   background-color: var(--white);
   padding: 1rem 0.8rem;
   border-radius: var(--nav-radius);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 4px;
 }
 
 .task-inc {
@@ -302,8 +303,41 @@ time {
   font-size: 0.9rem;
 }
 
+.task-add {
+  display: flex;
+  grid-column: 1/-1;
+  justify-content: center;
+  padding: 1rem 0.8rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: var(--white);
+  font: var(--menco-700);
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+
+  border: 0.15rem dashed rgba(255, 255, 255, 0.4);
+  border-radius: var(--nav-radius);
+}
+
+.task-add:hover {
+  opacity: 1;
+}
+
+.task-add .fa-plus-circle {
+  margin-right: 0.5rem;
+  margin-top: -0.15rem;
+}
+
 /***************************
   TASKBAR BUTTONS END
+****************************/
+
+/***************************
+  EST TIME START
+****************************/
+
+/***************************
+  EST TIME END
 ****************************/
 
 /***************************
