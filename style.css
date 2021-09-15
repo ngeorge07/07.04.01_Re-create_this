@@ -446,8 +446,12 @@ span.number {
 
 .text-part ul,
 ol {
-  line-height: 2.3rem;
-  padding-left: 2.5rem;
+  padding-left: 2.3rem;
+}
+
+.text-part ul li,
+ol li {
+  margin-top: 0.8rem;
 }
 
 .link {
