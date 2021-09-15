@@ -9,6 +9,7 @@
   --headline: #541c1f;
   --para: #785e60;
   --tex-links-ul-dots: #e96d73;
+  --active-op: 0.6;
 
   --menco-700: normal 700 1rem menco, sans-serif;
   --menco-500: normal 500 1rem menco, sans-serif;
@@ -61,12 +62,12 @@ h2::after {
   width: 1.7rem;
   padding-top: 0.2rem;
   border-bottom: 0.3rem solid #f05b56;
-  opacity: 0.6;
+  opacity: var(--active-op);
 }
 
 body {
   display: grid;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-rows: 1fr auto auto;
 }
 
 header {
@@ -95,7 +96,8 @@ a {
 }
 
 .top-ul,
-.clock-container ul {
+.clock-container ul,
+footer ul {
   list-style: none;
   display: flex;
   align-items: center;
@@ -115,7 +117,7 @@ a {
   transition: background-color 0.2s;
 }
 
-li a:hover {
+.top-ul li a:hover {
   color: var(--white);
   background-color: #f07773;
 }
@@ -236,7 +238,7 @@ li button {
 
 .tasks > p:first-child {
   color: var(--white);
-  opacity: 0.6;
+  opacity: var(--active-op);
 }
 
 .tasks > p:nth-child(2) {
@@ -311,7 +313,7 @@ li button {
 }
 
 .half .fa-check-circle:hover {
-  opacity: 0.6;
+  opacity: var(--active-op);
 }
 
 .task-desc .fa-check-circle {
@@ -363,7 +365,7 @@ li button {
   color: var(--white);
   font: var(--menco-700);
   font-size: 1.3rem;
-  opacity: 0.8;
+  opacity: var(--active-op);
   margin-top: 0.2rem;
 
   border: 0.15rem dashed rgba(255, 255, 255, 0.4);
@@ -435,18 +437,82 @@ ol {
   padding-left: 2.5rem;
 }
 
-.text-part a {
+.link {
   font: var(--menco-700);
   font-size: 1.3rem;
   color: var(--tex-links-ul-dots);
 }
 
-.text-part a:hover {
+.link:hover {
   text-decoration: underline;
 }
 
 /***************************
   TEXT-PART END
+****************************/
+
+/***************************
+  FOOTER START
+****************************/
+footer {
+  justify-self: center;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 0.15rem solid #efefef;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+footer ul a {
+  font: var(--menco-700);
+  color: var(--para);
+}
+
+footer ul a:hover {
+  opacity: var(--active-op);
+}
+
+footer p,
+small {
+  font: var(--menco-300);
+  color: var(--para);
+}
+
+footer p:nth-of-type(2) {
+  margin-top: -0.5rem;
+}
+
+small {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+footer .link {
+  font-size: 1.2rem;
+}
+
+.social {
+  font-size: 2.5rem;
+}
+
+.social a {
+  color: #999999;
+}
+
+.social i:hover {
+  opacity: var(--active-op);
+}
+
+.fa-facebook,
+.fa-twitter {
+  margin-right: var(--icon-margin);
+}
+
+/***************************
+  FOOTER END
 ****************************/
 
 /***************************
