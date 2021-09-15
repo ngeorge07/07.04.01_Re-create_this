@@ -277,6 +277,10 @@ li button {
   background-color: var(--bck-nav);
 }
 
+.taskbar .fa-ellipsis-v:hover {
+  background-color: #e27571;
+}
+
 .task-desc .fa-ellipsis-v {
   color: #989898;
   border: 0.1rem solid #989898;
@@ -319,6 +323,10 @@ li button {
 .task-desc .fa-check-circle {
   font-size: 1.7rem;
   margin-right: 0.6rem;
+}
+
+.half .fa-ellipsis-v:hover {
+  background-color: rgb(223, 223, 223);
 }
 
 .half p {
