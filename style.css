@@ -75,6 +75,10 @@ header {
   justify-content: center;
 }
 
+.attention {
+  font-weight: 700;
+}
+
 .wrapper,
 header {
   background-color: var(--bck-color);
@@ -442,6 +446,7 @@ span.number {
 
 .text-part ul,
 ol {
+  line-height: 2.3rem;
   padding-left: 2.5rem;
 }
 
